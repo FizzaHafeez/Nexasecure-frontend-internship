@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaAdmin — Users</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">Nexa<span>Admin</span></div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item">📊 Dashboard</a>
+        <a href="users.html" class="nav-item active">👥 Users</a>
+        <a href="products.html" class="nav-item">📦 Products</a>
+        <a href="settings.html" class="nav-item">⚙️ Settings</a>
+      </nav>
+      <div class="sidebar-footer">Capstone Project<br>NexaSecure Tech</div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1>Users</h1>
+        <div class="admin-badge"><span class="avatar">FH</span><span>Fizza Hafeez</span></div>
+      </header>
+
+      <!-- Add user -->
+      <section class="panel">
+        <h2>Add New User</h2>
+        <form id="addUserForm" class="inline-form">
+          <input type="text" id="newName" placeholder="Full name" required>
+          <input type="email" id="newEmail" placeholder="Email address" required>
+          <select id="newRole">
+            <option value="Customer">Customer</option>
+            <option value="Editor">Editor</option>
+            <option value="Admin">Admin</option>
+          </select>
+          <button type="submit" class="btn-primary">Add User</button>
+        </form>
+        <p class="form-feedback" id="userFeedback"></p>
+      </section>
+
+      <!-- User table -->
+      <section class="panel">
+        <div class="panel-head">
+          <h2>All Users (<span id="userTotal">0</span>)</h2>
+          <input type="text" id="userSearch" class="search-input" placeholder="Search by name or email...">
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Name ⇅</th>
+              <th class="sortable" data-sort="email">Email ⇅</th>
+              <th>Role</th>
+              <th>Joined</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="usersBody"></tbody>
+        </table>
+        <p class="empty-note hidden" id="noUsers">No users match your search.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/users.js"></script>
+</body>
+</html>

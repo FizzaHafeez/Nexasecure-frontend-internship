@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaAdmin — Products</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">Nexa<span>Admin</span></div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item">📊 Dashboard</a>
+        <a href="users.html" class="nav-item">👥 Users</a>
+        <a href="products.html" class="nav-item active">📦 Products</a>
+        <a href="settings.html" class="nav-item">⚙️ Settings</a>
+      </nav>
+      <div class="sidebar-footer">Capstone Project<br>NexaSecure Tech</div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1>Products</h1>
+        <div class="admin-badge"><span class="avatar">FH</span><span>Fizza Hafeez</span></div>
+      </header>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Inventory (<span id="productCount">0</span> shown)</h2>
+          <div class="filter-group" id="categoryFilters">
+            <button class="chip active" data-cat="all">All</button>
+            <button class="chip" data-cat="Audio">Audio</button>
+            <button class="chip" data-cat="Wearables">Wearables</button>
+            <button class="chip" data-cat="Accessories">Accessories</button>
+            <button class="chip" data-cat="Power">Power</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+</body>
+</html>

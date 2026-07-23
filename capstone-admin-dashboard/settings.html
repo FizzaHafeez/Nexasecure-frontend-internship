@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaAdmin — Settings</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">Nexa<span>Admin</span></div>
+      <nav class="side-nav">
+        <a href="index.html" class="nav-item">📊 Dashboard</a>
+        <a href="users.html" class="nav-item">👥 Users</a>
+        <a href="products.html" class="nav-item">📦 Products</a>
+        <a href="settings.html" class="nav-item active">⚙️ Settings</a>
+      </nav>
+      <div class="sidebar-footer">Capstone Project<br>NexaSecure Tech</div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1>Settings</h1>
+        <div class="admin-badge"><span class="avatar">FH</span><span>Fizza Hafeez</span></div>
+      </header>
+
+      <!-- Profile -->
+      <section class="panel">
+        <h2>Profile</h2>
+        <form id="profileForm" class="settings-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="profileName">Display Name</label>
+              <input type="text" id="profileName" value="Fizza Hafeez">
+              <p class="error-msg" id="nameError"></p>
+            </div>
+            <div class="field">
+              <label for="profileEmail">Email</label>
+              <input type="email" id="profileEmail" value="admin@nexaadmin.com">
+              <p class="error-msg" id="emailError"></p>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Save Profile</button>
+          <span class="form-feedback" id="profileFeedback"></span>
+        </form>
+      </section>
+
+      <!-- Preferences -->
+      <section class="panel">
+        <h2>Preferences</h2>
+        <div class="pref-row">
+          <div>
+            <p class="pref-title">Email notifications</p>
+            <p class="pref-desc">Get an email when a new order arrives</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="prefEmail" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="pref-row">
+          <div>
+            <p class="pref-title">Weekly summary</p>
+            <p class="pref-desc">Receive a Monday morning sales digest</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="prefWeekly">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="pref-row">
+          <div>
+            <p class="pref-title">Compact tables</p>
+            <p class="pref-desc">Show more rows with tighter spacing</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="prefCompact">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p class="pref-note">Preferences are saved automatically to localStorage.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/settings.js"></script>
+</body>
+</html>
