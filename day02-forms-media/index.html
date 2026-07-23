@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 - HTML Forms & Media</title>
+</head>
+<body>
+  <header>
+    <h1>HTML Forms &amp; Media</h1>
+    <p>Day 2 of the NexaSecure Tech Frontend Internship</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </p>
+
+          <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" minlength="8" required>
+          </p>
+
+          <p>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <p>
+            <label for="track">Internship Track:</label><br>
+            <select id="track" name="track">
+              <option value="frontend">Frontend Development</option>
+              <option value="backend">Backend Development</option>
+              <option value="fullstack">Full Stack</option>
+            </select>
+          </p>
+
+          <p>Experience level:</p>
+          <p>
+            <input type="radio" id="beginner" name="level" value="beginner" checked>
+            <label for="beginner">Beginner</label><br>
+            <input type="radio" id="intermediate" name="level" value="intermediate">
+            <label for="intermediate">Intermediate</label>
+          </p>
+
+          <p>Skills you already have:</p>
+          <p>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label><br>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label><br>
+            <input type="checkbox" id="js" name="skills" value="js">
+            <label for="js">JavaScript</label>
+          </p>
+
+          <p>
+            <label for="bio">Short Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself..."></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Register</button>
+          <button type="reset">Clear Form</button>
+        </p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Embedded Media</h2>
+
+      <h3>Image</h3>
+      <img src="https://picsum.photos/600/300" alt="Sample placeholder landscape image" width="600">
+      <p><em>Images always include descriptive alt text for accessibility.</em></p>
+
+      <h3>Video (HTML5 video element)</h3>
+      <video width="480" controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Embedded YouTube Video (iframe)</h3>
+      <iframe width="480" height="270"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        title="HTML tutorial video"
+        frameborder="0" allowfullscreen></iframe>
+
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>Day 2 deliverable &mdash; NexaSecure Tech Frontend Internship</p>
+  </footer>
+</body>
+</html>
