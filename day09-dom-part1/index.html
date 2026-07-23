@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 9 - DOM Manipulation Part 1</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #22303f; }
+    h1 { color: #273c56; }
+    section { background: #f5f6fa; border: 1px solid #dde3ec; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+    button { padding: 10px 18px; border: none; border-radius: 6px; background: #4a7bd0; color: #fff; font-size: 15px; cursor: pointer; margin-right: 8px; margin-top: 8px; }
+    button:hover { background: #3a63aa; }
+    .box { width: 120px; height: 120px; background: #cbd6e8; border-radius: 8px; margin-top: 12px; transition: all 0.3s ease; }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation — Part 1</h1>
+  <p>Selecting elements, changing content, and changing styles dynamically.</p>
+
+  <!-- Demo 1: changing text content -->
+  <section>
+    <h2>1. Change Content</h2>
+    <p id="message">This text has not been changed yet.</p>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeHTML()">Insert HTML</button>
+  </section>
+
+  <!-- Demo 2: changing styles -->
+  <section>
+    <h2>2. Change Styles</h2>
+    <div class="box" id="colorBox"></div>
+    <button onclick="changeColor()">Random Color</button>
+    <button onclick="growBox()">Grow</button>
+    <button onclick="resetBox()">Reset</button>
+  </section>
+
+  <!-- Demo 3: selecting multiple elements -->
+  <section>
+    <h2>3. Select Multiple Elements</h2>
+    <ul id="skillList">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <button onclick="highlightAll()">Highlight All Items</button>
+  </section>
+
+  <!-- Demo 4: creating elements -->
+  <section>
+    <h2>4. Create New Elements</h2>
+    <div id="container"></div>
+    <button onclick="addParagraph()">Add Paragraph</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
