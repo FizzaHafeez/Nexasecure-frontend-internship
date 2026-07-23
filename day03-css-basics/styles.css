@@ -1,0 +1,104 @@
+/* ============================================
+   Day 3: CSS Basics - NexaSecure Tech Internship
+   Topics: Box Model, Selectors, Colors, Fonts
+   ============================================ */
+
+/* --- Global reset: removes default browser margins/padding
+       and makes width calculations predictable --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding + border included in element width */
+}
+
+/* --- Element selector: applies to the whole page body --- */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* font stack with fallbacks */
+  background-color: #f0f4f3;
+  color: #23312e;
+  line-height: 1.6; /* improves readability */
+}
+
+/* --- Class selector for the page header --- */
+.page-header {
+  background-color: #1a6b5a; /* hex color value */
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px; /* shorthand: vertical | horizontal */
+}
+
+.subtitle {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* --- Layout container: limits content width and centers it --- */
+.container {
+  max-width: 800px;
+  margin: 0 auto;   /* auto left/right margins = horizontal centering */
+  padding: 24px;
+}
+
+/* --- Card sections demonstrate margin (outside) vs padding (inside) --- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #d5e0dd;       /* border: width style color */
+  border-radius: 8px;              /* rounded corners */
+  padding: 24px;                   /* space INSIDE the border */
+  margin-bottom: 24px;             /* space OUTSIDE the border */
+}
+
+/* --- Box model demonstration block --- */
+.box-demo {
+  background-color: #e3f2ee;   /* content area background */
+  padding: 20px;               /* pushes content away from the border */
+  border: 4px dashed #1a6b5a;  /* visible border */
+  margin: 20px;                /* pushes the whole box away from neighbors */
+}
+
+/* --- ID selector: targets one unique element (higher specificity) --- */
+#unique-text {
+  color: #8a4b12;
+  font-weight: bold;
+}
+
+/* --- Class selector on an inline span --- */
+.highlight {
+  background-color: #ffe9a8;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* --- Pseudo-classes --- */
+li:hover {
+  color: #1a6b5a;      /* changes color when the mouse is over the item */
+  cursor: pointer;
+}
+
+li:first-child {
+  font-weight: bold;   /* targets only the first li in each list */
+}
+
+/* --- Three ways of writing colors --- */
+.color-hex { color: #1a6b5a; }               /* hexadecimal */
+.color-rgb { color: rgb(180, 70, 40); }      /* red, green, blue */
+.color-hsl { color: hsl(220, 60%, 45%); }    /* hue, saturation, lightness */
+
+/* --- Font families --- */
+.font-serif {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+}
+
+.font-mono {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px; /* space between characters */
+}
+
+/* --- Footer --- */
+.page-footer {
+  text-align: center;
+  padding: 20px;
+  color: #5c6f6a;
+  font-size: 14px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3 - CSS Basics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>CSS Basics</h1>
+    <p class="subtitle">Box Model, Selectors, Colors &amp; Fonts</p>
+  </header>
+
+  <main class="container">
+    <section class="card" id="box-model">
+      <h2>The Box Model</h2>
+      <p>Every element is a box made of content, padding, border, and margin.</p>
+      <div class="box-demo">
+        This box has visible padding, border, and margin applied.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Selectors</h2>
+      <p>This paragraph is styled with a <span class="highlight">class selector</span>.</p>
+      <p id="unique-text">This paragraph is styled with an ID selector.</p>
+      <ul>
+        <li>List items styled with element selectors</li>
+        <li>Hover over these items to see a pseudo-class</li>
+        <li>The first item is styled with :first-child</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Colors &amp; Fonts</h2>
+      <p class="color-hex">Color set with a hex value (#1a6b5a)</p>
+      <p class="color-rgb">Color set with rgb() notation</p>
+      <p class="color-hsl">Color set with hsl() notation</p>
+      <p class="font-serif">This text uses a serif font family.</p>
+      <p class="font-mono">This text uses a monospace font family.</p>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Day 3 deliverable &mdash; NexaSecure Tech Frontend Internship</p>
+  </footer>
+</body>
+</html>
