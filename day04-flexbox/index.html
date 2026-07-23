@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 - CSS Flexbox</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar built with flexbox: logo left, links right -->
+  <nav class="navbar">
+    <div class="logo">FlexPractice</div>
+    <ul class="nav-links">
+      <li><a href="#rows">Rows</a></li>
+      <li><a href="#alignment">Alignment</a></li>
+      <li><a href="#cards">Cards</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="rows">
+      <h2>Flex Direction &amp; Wrap</h2>
+      <div class="flex-row">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+    </section>
+
+    <section id="alignment">
+      <h2>Justify Content Variations</h2>
+
+      <p class="label">justify-content: flex-start</p>
+      <div class="flex-row jc-start">
+        <div class="item small">A</div><div class="item small">B</div><div class="item small">C</div>
+      </div>
+
+      <p class="label">justify-content: center</p>
+      <div class="flex-row jc-center">
+        <div class="item small">A</div><div class="item small">B</div><div class="item small">C</div>
+      </div>
+
+      <p class="label">justify-content: space-between</p>
+      <div class="flex-row jc-between">
+        <div class="item small">A</div><div class="item small">B</div><div class="item small">C</div>
+      </div>
+
+      <p class="label">justify-content: space-around</p>
+      <div class="flex-row jc-around">
+        <div class="item small">A</div><div class="item small">B</div><div class="item small">C</div>
+      </div>
+    </section>
+
+    <section id="cards">
+      <h2>Responsive Card Layout (flex-wrap + flex-grow)</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Card One</h3>
+          <p>Cards share space equally using flex: 1 and wrap onto new lines on small screens.</p>
+        </div>
+        <div class="card">
+          <h3>Card Two</h3>
+          <p>Resize the browser window to watch the layout adapt automatically.</p>
+        </div>
+        <div class="card">
+          <h3>Card Three</h3>
+          <p>No media queries needed for the basic wrapping behavior.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Day 4 deliverable &mdash; NexaSecure Tech Frontend Internship</p>
+  </footer>
+</body>
+</html>

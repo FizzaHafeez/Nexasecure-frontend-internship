@@ -1,0 +1,90 @@
+/* ============================================
+   Day 4: CSS Flexbox - NexaSecure Tech Internship
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+  color: #2c3440;
+}
+
+/* --- Navbar: classic flexbox use case --- */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;            /* vertical centering */
+  background: #273c56;
+  color: #fff;
+  padding: 16px 32px;
+}
+
+.logo { font-weight: bold; font-size: 20px; }
+
+.nav-links {
+  display: flex;      /* horizontal menu */
+  gap: 24px;          /* spacing between items */
+  list-style: none;
+}
+
+.nav-links a { color: #fff; text-decoration: none; }
+.nav-links a:hover { text-decoration: underline; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+section { margin-bottom: 40px; }
+h2 { margin-bottom: 16px; }
+.label { font-family: monospace; margin: 12px 0 4px; color: #5a6a80; }
+
+/* --- Basic flex row with wrapping --- */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;   /* items drop to next line when space runs out */
+  gap: 12px;
+  background: #e4e9f2;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.item {
+  background: #4a7bd0;
+  color: #fff;
+  padding: 24px 32px;
+  border-radius: 6px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.item.small { padding: 12px 20px; font-size: 16px; }
+
+/* --- Justify-content variations --- */
+.jc-start   { justify-content: flex-start; }
+.jc-center  { justify-content: center; }
+.jc-between { justify-content: space-between; }
+.jc-around  { justify-content: space-around; }
+
+/* --- Responsive cards using flex-grow and wrap --- */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  flex: 1 1 250px;  /* grow, shrink, base width - wraps below 250px */
+  background: #fff;
+  border: 1px solid #dde3ec;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.card h3 { margin-bottom: 8px; color: #273c56; }
+
+.footer {
+  display: flex;
+  justify-content: center; /* centers footer text with flexbox */
+  padding: 20px;
+  color: #7a8699;
+  font-size: 14px;
+}
