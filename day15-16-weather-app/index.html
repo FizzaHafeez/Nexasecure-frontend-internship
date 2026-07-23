@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Days 15-16 - Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Weather Now</h1>
+
+    <!-- Search -->
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name (e.g. Lahore)">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Status messages (loading / errors) -->
+    <p class="status" id="status"></p>
+
+    <!-- Weather result card -->
+    <section class="weather-card hidden" id="weatherCard">
+      <h2 id="cityName"></h2>
+      <p class="condition" id="condition"></p>
+      <div class="temp-row">
+        <span class="temp" id="temperature"></span>
+        <span class="weather-icon" id="weatherIcon"></span>
+      </div>
+      <div class="details">
+        <div class="detail">
+          <span class="label">Feels like</span>
+          <span id="feelsLike"></span>
+        </div>
+        <div class="detail">
+          <span class="label">Humidity</span>
+          <span id="humidity"></span>
+        </div>
+        <div class="detail">
+          <span class="label">Wind</span>
+          <span id="wind"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
