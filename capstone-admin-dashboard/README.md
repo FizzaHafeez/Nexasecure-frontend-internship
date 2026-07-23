@@ -6,7 +6,7 @@ Final capstone for the **NexaSecure Tech Frontend Development Internship** (Week
 https://fizza-nexasecure.netlify.app/capstone-admin-dashboard/
 
 ## 📸 Screenshots
-> [Add desktop + mobile screenshots here]
+See screenshot-desktop.png and screenshot-mobile-dashboard.png in this folder.
 
 ## Overview
 NexaAdmin is a 4-page store administration dashboard built entirely with vanilla HTML, CSS, and JavaScript — no frameworks or chart libraries.
