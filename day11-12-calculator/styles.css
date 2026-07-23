@@ -1,0 +1,99 @@
+/* ============================================
+   Days 11-12: Calculator App
+   NexaSecure Tech Frontend Internship
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, #1d2942, #10243e);
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 340px;
+  background: #171e2e;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  color: #93a1b5;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* --- Display --- */
+.display {
+  background: #0f1420;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.history {
+  color: #5a6a80;
+  font-size: 14px;
+  min-height: 18px;
+  word-wrap: break-word;
+}
+
+.current {
+  color: #e7ecf3;
+  font-size: 36px;
+  font-weight: 600;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.current.error { color: #e06c6c; font-size: 22px; }
+
+/* --- Keypad --- */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px;
+}
+
+.key {
+  padding: 18px 0;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #232d42;
+  color: #e7ecf3;
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.key:hover { background: #2d3a55; }
+.key:active { transform: scale(0.95); }
+
+.key.op { background: #34527e; }
+.key.op:hover { background: #40639a; }
+
+.key.fn { background: #1e3a35; color: #64d3b4; }
+.key.fn:hover { background: #26493f; }
+
+.key.equals { background: #64d3b4; color: #0f1420; font-weight: bold; }
+.key.equals:hover { background: #7be0c4; }
+
+.hint {
+  margin-top: 14px;
+  text-align: center;
+  color: #5a6a80;
+  font-size: 12px;
+}
