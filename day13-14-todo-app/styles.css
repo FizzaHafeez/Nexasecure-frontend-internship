@@ -1,0 +1,159 @@
+/* ============================================
+   Days 13-14: To-Do App with Local Storage
+   NexaSecure Tech Frontend Internship
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(150deg, #eef4f2, #dce9f2);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  color: #22303f;
+}
+
+.app {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(30, 60, 80, 0.12);
+  height: fit-content;
+}
+
+.app-header { margin-bottom: 20px; }
+.app-header h1 { color: #1a6b5a; font-size: 28px; }
+.date { color: #7a8a95; font-size: 14px; margin-top: 2px; }
+
+/* --- Add task row --- */
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #dbe5e2;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+#taskInput:focus { border-color: #1a6b5a; }
+
+#addBtn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #1a6b5a;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#addBtn:hover { background: #14574a; }
+
+/* --- Filters --- */
+.filters { display: flex; gap: 8px; margin-bottom: 16px; }
+
+.filter {
+  padding: 6px 14px;
+  border: 1px solid #dbe5e2;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  color: #5c6f6a;
+}
+.filter.active {
+  background: #1a6b5a;
+  border-color: #1a6b5a;
+  color: #fff;
+}
+
+/* --- Task list --- */
+#taskList { list-style: none; }
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  border-bottom: 1px solid #eef2f1;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.task input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #1a6b5a;
+  cursor: pointer;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.task.completed .task-text {
+  text-decoration: line-through;
+  color: #a6b3ae;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  color: #c5544f;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0.6;
+}
+.delete-btn:hover { opacity: 1; background: #fdeeee; }
+
+/* --- Empty state --- */
+.empty-state {
+  text-align: center;
+  color: #9aa8a3;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
+/* --- Footer --- */
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #eef2f1;
+  font-size: 13px;
+  color: #7a8a95;
+}
+
+#clearCompleted {
+  border: none;
+  background: none;
+  color: #c5544f;
+  cursor: pointer;
+  font-size: 13px;
+}
+#clearCompleted:hover { text-decoration: underline; }
+
+/* --- Mobile --- */
+@media (max-width: 420px) {
+  body { padding: 16px 10px; }
+  .app { padding: 20px 16px; }
+}
